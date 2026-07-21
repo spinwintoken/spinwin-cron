@@ -1,6 +1,7 @@
 name: Spinwin 84h Cycle
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */84 * * *"
 
@@ -13,3 +14,4 @@ jobs:
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
           https://zejhbfuuherovlxklrgy.supabase.co/functions/v1/tokenCycle
+

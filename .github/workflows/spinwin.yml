@@ -1,0 +1,15 @@
+name: Spinwin 84h Cycle
+
+on:
+  schedule:
+    - cron: "0 */84 * * *"
+
+jobs:
+  run-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Supabase Function
+        run: |
+          curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+          https://zejhbfuuherovlxklrgy.supabase.co.supabase.co/functions/v1/tokenCycle

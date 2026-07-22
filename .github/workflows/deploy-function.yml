@@ -23,7 +23,4 @@ jobs:
         run: supabase functions deploy tokenCycle --project-ref zejhbfuuhervolxklrgy
 
 
-        run: supabase functions deploy tokenCycle --project-ref zejhbfuuhervolxklrgy
-
-
 
